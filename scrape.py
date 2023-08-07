@@ -1,5 +1,4 @@
 from network import NetworkRequest
-from dateutil.parser import parse
 from datetime import datetime
 from utils import add_days, get_number_of_days_in_month, get_number_of_months, add_months_to_date
 from data_handler import DataHandler
