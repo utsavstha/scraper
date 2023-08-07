@@ -21,11 +21,11 @@ if __name__ == "__main__":
     #Convert the string start date to Date Type
     start_date = datetime.strptime(f"01/01/{start_year}", '%m/%d/%Y')
 
-    share_information = []
 
     #Loops through months in year 
     # for i in range(get_number_of_months()):
     for month in range(1, 13, 1):
+        share_information = []
 
         #Add months to current date
         date = f"{month}/01/{start_year}"
@@ -55,8 +55,3 @@ if __name__ == "__main__":
 
         #Insert all data to database
         db_connector.insert(share_information)
-
-            # record_for_month.append(ShareModel(date, ))
-    # print(dt)
-    # # datetime.datetime(2010, 2, 15, 0, 0)
-    # print(dt.strftime('%d/%m/%Y'))
