@@ -29,7 +29,7 @@ if __name__ == "__main__":
             share_information = []
 
             #Add months to current date
-            date = f"{month}/01/{start_year}"
+            date = f"{month}/01/{year}"
             date = datetime.strptime(date, '%m/%d/%Y')
 
             # date = datetime.strptime(start_date, '%m/%d/%Y')
