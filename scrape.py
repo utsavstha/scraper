@@ -6,8 +6,8 @@ from db_handler import DatabaseConnector
 from error_codes import NO_DATA
 from payload_types import MERO_LAGANI
 import sys
-import logging
-logger = logging.getLogger().setLevel(logging.INFO)
+# import logging
+# logger = logging.getLogger().setLevel(logging.INFO)
 
 #month/date/year
 start_year = sys.argv[1]
@@ -48,9 +48,9 @@ if __name__ == "__main__":
                     #Merge previously extracted information with current information
                     share_information += parsed_data
                 else:
-                    logger.info(f"Parse error {str_date}")
+                    print(f"Parse error {str_date}")
             else:
-                logger.info(f"Data fetch error for {str_date}")
+                print(f"Data fetch error for {str_date}")
             date = add_days(date, 1)
 
         #Insert all data to database
