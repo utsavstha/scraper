@@ -12,7 +12,7 @@ class NetworkRequest:
     def fetch_data(self, date: str, payload_type):
         if payload_type == MERO_LAGANI:
             #Adding a random delay to throwoff the scrap filters
-            delay = random.randint(1, 4)
+            delay = random.randint(6, 16)
             time.sleep(delay)
 
             url = "https://merolagani.com/StockQuote.aspx"
