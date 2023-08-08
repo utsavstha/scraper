@@ -12,7 +12,8 @@ class DataHandler:
 
             # Extract headers
             # headers = [th.get_text().strip() for th in rows[0].find_all('th')]
-
+            page_2_link = soup.find('a', title='Page 2')
+            page_3_link = soup.find('a', title='Page 3')
             # Extract data from the rows
             for row in rows[1:]:
                 row_data = [td.get_text().strip().replace(",", "") for td in row.find_all('td')]
@@ -26,6 +27,6 @@ class DataHandler:
                                         qty=row_data[7],
                                         turnover=row_data[8])
                 data.append(model.toSQL())
-            return data
+            return (data, page_2_link, page_3_link)
         else:
-            return NO_DATA
+            return (NO_DATA, False, False)

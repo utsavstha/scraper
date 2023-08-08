@@ -1,4 +1,4 @@
-def get_mero_lagani_payaload(date):
+def get_mero_lagani_payaload(date, page=1):
     return {
                 '__EVENTTARGET': 'ctl00$ContentPlaceHolder1$lbtnSearch',
                 '__EVENTARGUMENT': '',
@@ -17,5 +17,6 @@ def get_mero_lagani_payaload(date):
                 'ctl00$ContentPlaceHolder1$PagerControl1$hdnPCID': 'PC1',
                 'ctl00$ContentPlaceHolder1$PagerControl1$hdnCurrentPage': '0',
                 'ctl00$ContentPlaceHolder1$PagerControl2$hdnPCID': 'PC2',
-                'ctl00$ContentPlaceHolder1$PagerControl2$hdnCurrentPage': '3'
+                'ctl00$ContentPlaceHolder1$PagerControl2$hdnCurrentPage': page,
+                'ctl00$ContentPlaceHolder1$PagerControl2$btnPaging': ''
             }

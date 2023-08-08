@@ -9,7 +9,7 @@ class NetworkRequest:
     # def __init__(self, date, payload):
         
 
-    def fetch_data(self, date: str, payload_type):
+    def fetch_data(self, date: str, payload_type, page):
         if payload_type == MERO_LAGANI:
             #Adding a random delay to throwoff the scrap filters
             delay = random.randint(1, 4)
@@ -18,7 +18,7 @@ class NetworkRequest:
             url = "https://merolagani.com/StockQuote.aspx"
 
 
-            payload = get_mero_lagani_payaload(date)
+            payload = get_mero_lagani_payaload(date, page)
         
             headers = {
             'Cookie': 'ASP.NET_SessionId=2ucimswv2t5m3sr3yb5df2t1'
